@@ -3,10 +3,10 @@ import React,{useState,useEffect,useRef} from 'react'
 function TodoForm(props) {
 const [input,setInput] = useState('');
 
-const inputRef = useRef(null);
+const inputRef = useRef(null);  // The useRef Hook allows us to create mutable variables in functional components. It's useful for accessing DOM nodes/React elements, and to store mutable variables without triggering a re-render.
 
 useEffect(() => {
-    inputRef.current.focus()
+    inputRef.current.focus()   //  By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we'll refer to it as our “effect”), and call it later after performing the DOM updates.
 })
 
 const handleChange = e => {
